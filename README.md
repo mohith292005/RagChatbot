@@ -194,19 +194,6 @@ Cited answer returned to UI
 
 ---
 
-## Roadmap
-
-- [x] Multi-document upload via UI
-- [x] Per-document conversation history
-- [x] Persistent chat via localStorage
-- [x] Anti-hallucination with source citations
-- [ ] Conversation memory (multi-turn context)
-- [ ] Re-ranking for improved retrieval accuracy
-- [ ] Delete document from sidebar
-- [ ] Streaming responses
-- [ ] Deploy on Render + Vercel
-
----
 
 ## Author
 

@@ -21,7 +21,7 @@ DocQuery is a private, local-first document chatbot built on a full RAG (Retriev
 ![Upload](assets/upload.png)
 
 ### Ask a question
-![Chat](assets/chat.png)
+![ask](assets/ask.png)
 
 ---
 

@@ -1,7 +1,12 @@
 import fitz  # PyMuPDF
 import pandas as pd
 from pathlib import Path
-from docling.document_converter import DocumentConverter
+
+try:
+    from docling.document_converter import DocumentConverter
+except Exception:  # pragma: no cover - optional dependency for deployment
+    DocumentConverter = None
+
 
 def extract_pdf(path: str) -> str:
     doc = fitz.open(path)
@@ -17,6 +22,8 @@ def extract_excel(path: str) -> str:
 
 def extract_docling(path: str) -> str:
     """Use Docling for complex PDFs with tables/figures."""
+    if DocumentConverter is None:
+        raise ImportError("docling is not installed; falling back to basic PDF text extraction")
     converter = DocumentConverter()
     result = converter.convert(path)
     return result.document.export_to_markdown()
